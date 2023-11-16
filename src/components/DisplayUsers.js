@@ -1,6 +1,6 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { styled } from 'styled-components';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { styled } from "styled-components";
 import { removeUser } from "../store/slices/userSlice";
 
 const DisplayUsers = () => {
@@ -12,8 +12,8 @@ const DisplayUsers = () => {
 
   const deleteUser = (user) => {
     dispatch(removeUser(user));
-    console.log('Deleted user:', user);
-  }
+    console.log("Deleted user:", user);
+  };
 
   return (
     <Wrapper>
@@ -22,7 +22,12 @@ const DisplayUsers = () => {
           <li key={id}>
             <div>{user}</div>
             <div>
-              <button onClick={() => deleteUser(id)}>Delete</button>
+              <button
+                className="btn btn-sm btn-danger"
+                onClick={() => deleteUser(id)}
+              >
+                Delete
+              </button>
             </div>
           </li>
         );
@@ -35,7 +40,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 10px; /* Adjust the gap size as needed */
-  
+
   li {
     display: flex;
     justify-content: space-between;

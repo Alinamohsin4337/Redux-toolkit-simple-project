@@ -5,37 +5,15 @@ const Navbar = () => {
   return (
     <Wrapper>
       <CenterContent>
-      
         <h1>Admin Table</h1>
-     
       </CenterContent>
       <nav>
         <ul className="menuItems">
-          <li>
-            <a href="/" data-item="Home">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/" data-item="About">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/" data-item="Projects">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="/" data-item="Code">
-              Code
-            </a>
-          </li>
-          <li>
-            <a href="/" data-item="Contact">
-              Contact
-            </a>
-          </li>
+          <li className="fw-bold">Home</li>
+          <li className="fw-bold">About</li>
+          <li className="fw-bold">Projects</li>
+          <li className="fw-bold">Code</li>
+          <li className="fw-bold">Contact</li>
         </ul>
       </nav>
     </Wrapper>
@@ -43,17 +21,16 @@ const Navbar = () => {
 };
 
 const Wrapper = styled.section`
-position: relative;
+  position: relative;
   nav {
     margin: 3rem 0;
     background: #f9f9f9;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
     padding-right: 2rem;
-    width:70%;
+    width: 70%;
     position: relative;
-    left:15%
-
+    left: 15%;
   }
   nav .menuItems {
     list-style: none;
@@ -65,9 +42,9 @@ position: relative;
   }
   nav .menuItems li a {
     text-decoration: none;
-    color: #8f8f8f;
+    color: black;
     font-size: 20px;
-    font-weight:100;
+    font-weight: 100;
     transition: all 0.5s ease-in-out;
     position: relative;
     text-transform: uppercase;
@@ -100,7 +77,7 @@ const CenterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-margin-top:7rem;
+  margin-top: 7rem;
   text-align: center;
 `;
 
